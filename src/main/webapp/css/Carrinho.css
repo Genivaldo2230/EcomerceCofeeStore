@@ -1,0 +1,527 @@
+* {
+    /*border: 3px solid red;*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    background: url('/img/carrinhoCafe2.webp') no-repeat center;
+    background-size: 100%;
+    background-attachment: fixed; /* Set the background image to be fixed */
+}
+.dropdown-toggle {
+    white-space: nowrap;
+    margin: 0 184px 0 13px;
+    border: 5px solid #ffffff;
+    width: 22em;
+    border-radius: 0 69px;
+}
+body {
+    position: relative;
+    text-align: center;
+    margin: 20px;
+    background: url('/img/carrinhocafe2.webp') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed; /* set the background image to be fixed */
+}
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(65 4 4 / 51%);
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+#container {
+    width: 100%;
+    height: 142vh;
+    padding: 20px;
+    display: inline-block;
+    justify-items: center;
+}
+
+#container-sedex {
+
+    width: 100%;
+    display: inline-block;
+    justify-items: center;
+}
+.row-sedex {
+    background-color: #00000082;
+    padding: 6px;
+    height: 47%;
+    border: 3px solid white;
+}
+
+container-sedex-frete {
+    border: 3px solid yellow;
+    width: 100%;
+    display: inline-block;
+    justify-items: center;
+}
+
+.col-4 {
+    width: 31em;
+}
+
+.col-4.class\=frete {
+    display: grid;
+    justify-items: stretch;
+    margin-left: 30em;
+    width: 20em;
+    margin-top: -14em;
+}
+
+.col-4.class\=frete1 {
+    display: grid;
+    justify-items: stretch;
+    margin-left: 40em;
+}
+h2 {
+    border-bottom: 7px solid white;
+    color: white;
+    background-color: rgb(12 4 1 / 20%);
+    display: block;
+    font-size: 34px;
+    margin-block-start: -0.01em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+/*inicio class containe logo marca*/
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #301e16;
+    padding: 10px;
+}
+
+.menu li {
+    margin: 0;
+    padding: 0;
+}
+
+h1-logo {
+    display: grid;
+    color: #f8d7da;
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 3em;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: white;
+    border-bottom: 18px solid #ffffff94;
+}
+h1-tp {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: white;
+
+}
+h3 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 14px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: white;
+    border-bottom: 8px solid white;
+    width: 12em;
+}
+
+.menu a {
+    text-decoration: none;
+    color: red;
+    padding: 5px 112px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Kanit;
+}
+
+button-voltar {
+    padding: 7px 42px;
+    font-size: 16px;
+    background-color: #301e16;
+    color: white;
+    border: 1.5px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: auto 30px;
+}
+
+button-voltar:hover {
+    background-color: #2d00fe;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 31vh;
+}
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu-logo img {
+    max-width: 140px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.slideshow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.slideshow-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 10s infinite;
+}
+
+.slideshow-image.active {
+    opacity: 1;
+    animation: none;
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+}
+
+/*Fim da class containe logo marca*/
+
+/*tabela de produtos*/
+table {
+    display: flex;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    justify-content: end;
+    background-color: #4c342bbf;
+}
+
+tbody {
+    display: inline-table;
+    width: 115em;
+    margin: 10px;
+}
+
+table, th, td {
+    border: 1px solid rgba(218, 204, 204, 0.44)
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-family: math;
+    background-color: #0000005e;
+}
+
+th {
+    background-color: #5d0b0a
+}
+
+img {
+    display: block;
+    margin: 10px 0;
+    height: 100px;
+}
+
+.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+}
+
+/*Fim da class tabela de produtos*/
+p {
+    display: flex;
+    margin-bottom: 10px;
+    color: #e8f0fe;
+    font-weight: 500;
+    font-size: 17px;
+    background-color: #4a30266b;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 24em;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+}
+
+p label {
+    color: wheat;
+}
+
+p#totalSemFrete {
+    background-color: rgb(61 9 9);
+    width: 23em;
+    padding: 10px;
+    font-size: large;
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: cursive;
+}
+p#totalAtualizado {
+    background-color: #02894b;
+    color: #101010;
+    width: 32em;
+    padding: 10px;
+    font-size: 20px;
+    left: 70.5em;
+    position: sticky;
+    margin-top: -55px;
+    font-family: system-ui;
+}
+
+label.d-block {
+    border: 2px solid wheat;
+    background-color: #7d0606;
+    width: 21em;
+    border-radius: 15px;
+    margin: 20px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+button {
+    display: inline;
+    cursor: pointer;
+    /* padding: 0px 33px; */
+    background-color: #0c6fff;
+    color: #fff;
+    border-bottom: 3px solid #f8f9fa;
+    border-radius: 11px 45px;
+    font-size: 16px;
+    width: 112px;
+    font-weight: 500;
+    font-family: monospace;
+}
+button.btn-excluir:hover {
+    background-color: red;
+}
+
+button.btn-mais:hover {
+    background-color: green;
+}
+
+button.btn-menos:hover {
+    background-color: red;
+}
+
+/* Style for the form */
+#comprarForm {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+/* Style for the button */
+#btnComprar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 20px;
+    width: 184px;
+    border: none;
+    cursor: pointer;
+    border: 2px solid #ddc8c88c;
+    border-radius: 23px;
+    margin-left: -130px;
+    text-align: center;
+}
+
+/* Hover effect for the button */
+#btnComprar:hover {
+    background-color: #11ac05; /* Darker color on hover */
+}
+
+/* Style for the <p-comprar> element inside the button */
+#btnComprar p-comprar {
+    margin: 0; /* Remove default margin */
+}
+
+/* adjust styles for responsiveness */
+@media screen and (max-width: 768px) {
+    #button-comprar img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+#opcoesentrega {
+    display: flex;
+    align-items: flex-end;
+    width: 27em;
+    justify-content: center;
+    margin-top: -31em;
+    margin-left: 78em;
+    flex-direction: column;
+}
+
+#opcoesentrega h1, #opcoesentrega h3 {
+    text-align: center;
+    color: #ffff;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+input:not([type="image" i]) {
+    display: flex;
+    box-sizing: border-box;
+    border: 1.2px solid #6a321c;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    /* margin: 12px; */
+    border-radius: 20px;
+    background-color: #0000008c;
+    /* margin-left: 18em; */
+    /* margin-top: -39px; */
+    margin: 10px;
+    text-align: center;
+}
+
+span-cep {
+    position: static;
+    left: 25px;
+}
+span-cep {
+    font-size: 2em;
+    color: white;
+    font-weight: 700;
+    font-family: monospace;
+    position: sticky;
+    margin-left: 0px;
+}
+
+input[type="radio" i] {
+    border: 3px solid yellow;
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+}
+
+label {
+    color: red;
+}
+
+button#buscarCEP {
+    width: 222px;
+    height: 34px;
+    border: 1px solid #f8d7da;
+    border-radius: 25px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 50px;
+}
+
+/*icone do cartao*/
+a.view.link-icon-detail {
+    display: inline-flex;
+    text-decoration: none;
+    margin: 10px;
+    color: #333;
+}
+
+/* estilizando as imagens */
+a.view.link-icon-detail img {
+    width: 44px; /* largura padrão */
+    height: 44px; /* altura padrão */
+    margin-right: 5px; /* espaço entre as imagens, ajuste conforme necessário */
+    border: 1px solid rgba(221, 221, 221, 0.12); /* borda opcional */
+    border-radius: 4px; /* borda arredondada opcional */
+}
+
+/* estilo específico para a segunda imagem com id "image" */
+a.view.link-icon-detail img#image {
+    width: 41px; /* largura específica para a segunda imagem */
+    height: 41px; /* altura específica para a segunda imagem */
+}
+
+footer {
+    background-color: #3b1e0aa8;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 1em;
+    /* height: 4%; */
+    width: 100%;
+    left: 0;
+}

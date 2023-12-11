@@ -1,0 +1,314 @@
+@import "https://fonts.googleapis.com/css?family=Ubuntu:400,700italic";
+@import "https://fonts.googleapis.com/css?family=Cabin:400";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&display=swap');
+
+body{
+    height: 100%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50px;
+    background-color: red;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50px;
+}
+
+input:checked + .slider {
+    background-color: green;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu-logo img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 10px;
+}
+.btn-cadastra {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    font-family: 'Kanit';
+    font-weight: 600;
+    border: none;
+    background-color: #84202900;
+    color: #d91919;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+.btn-cadastra:hover {
+    background-color: #4a2618;
+}
+
+.btn-cadastra i {
+    margin-right: 15px;
+}
+
+.slideshow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.slideshow-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 10s infinite;
+}
+
+.slideshow-image.active {
+    opacity: 1;
+    animation: none;
+}
+
+
+h2 {
+    color: red;
+    font-weight: bold;
+    font-size: 44px;
+    font-family: Kanit;
+}
+
+.menu a {
+    text-decoration: none;
+    color: red;
+    padding: 5px 112px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Kanit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Kanit;
+
+}
+
+.menu {
+    margin-top: 20px;
+    height: 200px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b1e0ac9;
+    padding: 10px;
+}
+
+
+.menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.menu li h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #FF0000;
+
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-body {
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color)
+}
+.table {
+    font-size: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 5px solid yellow;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #343a40;
+    color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Adjust the width as needed */
+    height: 80%; /* Adjust the height as needed */
+    overflow: auto;
+}
+@media (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles for screens up to 480px wide */
+    #container {
+        display: block;
+        text-align: center;
+    }
+
+    /* Adjust other elements as needed */
+}
+/* Adjust styles for different zoom levels */
+@media (max-width: 768px) and (max-zoom: 1) {
+    /* Styles for screens up to 768px wide and normal zoom */
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) and (max-zoom: 0.8) {
+    /* Styles for screens up to 768px wide and reduced zoom */
+    body {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) and (max-zoom: 1) {
+    /* Styles for screens up to 480px wide and normal zoom */
+    #container {
+        display: block;
+        text-align: center;
+    }
+
+    /* Adjust other elements as needed */
+}
+footer {
+    background-color: #3b1e0a;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: -18em;
+    width: 100%;
+}
+
+
+
+/* Estilos da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Estilos da paginação */
+#paginação {
+  text-align: center;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#pagina-atual {
+  margin: 0 10px;
+}
+

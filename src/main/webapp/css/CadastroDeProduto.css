@@ -1,0 +1,381 @@
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: rgba(171, 18, 18, 0.1);
+    background: url("/img/Fundo3.jpg")no-repeat center center fixed;
+    background-size: cover;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0em 0em 10em;
+    padding: 0;
+}
+#container{
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0em 0em 10em;
+    padding: 0;
+}
+.icon{
+    width: 80px;
+    height: 69px;
+    margin-right: 0px;
+}
+section h1{
+    margin: 0;
+    padding: 0;
+}
+#container h1{
+    margin: 0;
+    padding: 0;
+}
+/* Estilizando o título */
+section h1 {
+    color: #f4f4f4;
+    font-size: 3.8em;
+    font-weight: bold;
+    font-family: "Cabin", helvetica, arial, sans-serif;
+}
+/* barra de menu da logo e sair */
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 33px;
+    padding-inline-start: 40px;
+}
+.menu a {
+    text-decoration: none;
+    color: red;
+    padding: 5px 112px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Kanit;
+    position: absolute;
+    left: 60em;
+    margin-top: -5em;
+}
+.menu li {
+    margin: 0;
+    padding: 0;
+}
+.menu li h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #FF0000
+}
+.menu-logo {
+    display: flex;
+    position: sticky;
+    width: 97vw;
+    align-items: center;
+    /*border: 3px solid red;*/
+    background-color: #5b2627b8;
+}
+.menu-logo img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 10px;
+}
+h3 {
+    display: block;
+    color: white;
+    font-size: 1.7em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+p {
+    display: block;
+    color: white;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 1.3em;
+}
+
+#radioButtons {
+    border: 4px solid #ccc;
+    border-radius: 44px;
+    width: 26em;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    margin: 18px auto;
+    align-content: stretch;
+    flex-direction: row;
+}
+.image-preview {
+    margin-bottom: 10px;
+}
+.image-preview img {
+    position: relative;
+    left: 5%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+#cancelButton {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+
+/* Estilos para o botão de envio */
+input[type="submit" i] {
+    padding: 10px 54px;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #002991;
+    color: white;
+    border: 3px solid #032580;
+    border-radius: 20px;
+    position: inherit;
+    margin: 1em 0em 0em 9em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+input[type="file" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    align-items: baseline;
+    color: inherit;
+    text-overflow: ellipsis;
+    white-space-collapse: preserve;
+    text-wrap: nowrap;
+    text-align: start !important;
+    padding: initial;
+    border: initial;
+    border-color: initial;
+    overflow: hidden !important;
+    border-radius: initial;
+}
+/* Estilo ao passar o mouse sobre o botão */
+
+input[type="submit" i]:hover {
+    /*background-color: #05a41e; */
+    background-color: #036810;/* Cor de fundo ao passar o mouse */
+    border-color: #ffffff;
+}
+/*  */
+/* Estilo para elementos dentro de .image-preview */
+.image-preview label, .image-preview input[type="file"] {
+    display: block;
+    margin-bottom: 0px;
+    color: white;
+    font-size: 15px;
+    border: 3px solid #f8f9fa;
+    padding: 9px;
+    border-radius: 13px;
+}
+label {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    /* align-content: center; */
+}
+/* Ajuste a margem para posicionar os elementos */
+.image-preview label {
+    margin-left: 0em;
+    margin-right: 30em;
+    margin-top: -3.4em;
+
+}
+/* Estilos para o rótulo personalizado */
+.file-input-label {
+    background-color: #3b1e0a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+/* Oculte o campo de entrada de arquivo real */
+
+
+/* Oculte o campo de entrada de arquivo real */
+.file-input {
+    display: none;
+}
+
+/* Estilizando o formulário */
+form {
+    width: 35vw;
+    margin: 0 auto;
+    padding: 20px;
+    border: 6px solid #903e2e;
+    border-radius: 2%;
+    background-color: #39120d75;
+}
+
+/* Estilizando os campos de entrada e parágrafos */
+form p {
+    margin: 10px 0; /* Adiciona margens verticais entre os campos e os parágrafos */
+}
+
+form input[type="text"] {
+    width: 100%; /* Define a largura dos campos de entrada e textarea para 100% */
+    padding: 10px; /* Adiciona espaço interno aos campos de entrada e textarea */
+    border: 1px solid #ccc; /* Adiciona uma borda fina */
+    border-radius: 20px; /* Adiciona bordas arredondadas */
+    font-size: 16px; /* Define o tamanho da fonte */
+    background-color: rgba(3, 17, 3, 0.48);
+    color: white;
+}
+
+form input[type="number"] {
+    width: 22%; /* Define a largura dos campos de entrada e textarea para 100% */
+    padding: 10px; /* Adiciona espaço interno aos campos de entrada e textarea */
+    border: 1px solid #ccc; /* Adiciona uma borda fina */
+    border-radius: 20px; /* Adiciona bordas arredondadas */
+    font-size: 16px; /* Define o tamanho da fonte */
+    background-color: rgba(3, 17, 3, 0.48);
+    color: white;
+}
+
+form textarea {
+    width: 100%; /* Define a largura dos campos de entrada e textarea para 100% */
+    padding: 10px; /* Adiciona espaço interno aos campos de entrada e textarea */
+    border: 1px solid #ccc; /* Adiciona uma borda fina */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    font-size: 16px; /* Define o tamanho da fonte */
+}
+
+form button {
+    border: 3px solid #032580;
+    padding: 10px 20px;
+    background-color: #002991;
+    color: white;
+    font-size: 16px;
+    border-radius: 35px;
+    cursor: pointer;
+    margin-left: -6em;
+    margin-top: 13px;
+    font-weight: 600;
+    /* width: 40em; */
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+form button:hover {
+    background-color: #036810;
+    border-color: #ffffff;
+}
+.btn-add {
+    display: flex;
+
+    color: white;
+    font-size: 14px;
+    border-radius: 35px;
+    cursor: pointer;
+    margin: auto -18em;
+    margin-top: 46px;
+    width: 43em;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    /* border: 3px solid red; */
+    flex-wrap: nowrap;
+    align-content: center;
+    flex-direction: column-reverse;
+    position: absolute;
+    padding: 14px 1px;
+    align-items: stretch;
+    justify-content: center;
+}
+
+
+/*TRTABALHO DE RESPONSIVIDADE DA TELA*/
+/* Estilos comuns para todos os tamanhos de tela */
+/* ... (seus estilos) ... */
+
+/* Estilos para telas menores (exemplo: dispositivos móveis) */
+@media (max-width: 767px) {
+    /* Estilos específicos para telas menores aqui */
+    /* Pode ajustar larguras, tamanhos de fonte, etc. */
+    form {
+        width: 90%; /* Por exemplo, 90% da largura da tela */
+    }
+
+    form button {
+        width: 100%; /* Ocupar toda a largura disponível */
+    }
+}
+
+/* Estilos para telas médias (exemplo: tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Estilos específicos para telas médias aqui */
+    /* Pode ajustar larguras, tamanhos de fonte, etc. */
+    form {
+        width: 70%; /* Por exemplo, 70% da largura da tela */
+    }
+
+    form button {
+        width: 50%; /* Reduzir a largura do botão */
+    }
+}
+
+/* Estilos para telas maiores (exemplo: desktops) */
+@media (min-width: 1024px) {
+    /* Estilos específicos para telas maiores aqui */
+    /* Pode ajustar larguras, tamanhos de fonte, etc. */
+    form {
+        width: 50%; /* Por exemplo, 50% da largura da tela */
+    }
+
+    form button {
+        width: 30%; /* Reduzir a largura do botão ainda mais */
+    }
+}
+/* Estilizando o footer */
+#roda-pe {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3b1e0a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 45px;
+}
+/*Textoo do rodape*/
+p1 {
+    font-size: 14px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor do texto */
+    text-align: center; /* Alinhamento de texto centralizado */
+    margin-top: 10px; /* Espaço superior */
+}

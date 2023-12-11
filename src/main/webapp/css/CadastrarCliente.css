@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --font-family: 'Inter', sans-serif;
+    --color-label-red: #df1111;
+    --color-label-whiter: #ffffff;
+    --text-decoration-taxado: underline;
+    --text-decoration-color: #d31212; /* Set the color for the underline */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 3px solid rgb(255, 0, 0);*/
+}
+html {
+    background: url("../img/CadastroCliente9.jpeg") no-repeat center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This makes the background fixed */
+    transform: scale(9/1.8);
+}
+.zoom-effect {
+    transform: scale(1.8);
+    /* Adjust the scale value for the desired zoom effect */
+}
+body {
+    font-family: var(--font-family);
+    font-weight: 500;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+/*TRATAMENTO DO ERROR QUANDO NAO VALIDADOS CAMPOS */
+.alert {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+
+
+/*LOGO DA EMPRESA */
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b1e0ac9;
+    padding: 10px;
+}
+.menu li {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: red;
+    font-weight: bold;
+    font-size: 44px;
+    font-family: Kanit;
+}
+.menu a {
+    text-decoration: none;
+    color: red;
+    padding: 5px 112px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Kanit;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 31vh;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.menu-logo {
+    display: flex;
+    align-items: center;
+}
+.menu-logo img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 10px;
+}
+.slideshow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+.slideshow-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 10s infinite;
+}
+.slideshow-image.active {
+    opacity: 1;
+    animation: none;
+}
+#container {
+    background-color: #000000c9;
+    border: 1.5px solid #ffffff;
+    border-radius: 15px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 79%;
+    backdrop-filter: contrast(117%);
+    margin: 0px 0px 15px 124px;
+    height: 100%;
+}
+/* Example of using the custom font-family*/
+h1, h2, h3, h4, h5, h6 {
+    display: flex;
+
+    font-weight: 600;
+    font-size: 50px;
+    font-family: var(--font-family);
+    color: var(--color-label-red);
+}
+h1, h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #ffffff; /* Set the color for the underline */
+}
+h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: -168px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+}
+#password-container {
+    display: flex;
+    border-radius: 21px;
+    border: 3px solid white;
+    width: 43em;
+    margin: 66px -18px 78px 4px;
+    height: 70px;
+}
+.show-password-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+#showPasswordLabel {
+    position: relative;
+}
+#showPassword {
+    position: absolute;
+    left: -9999px;
+}
+/* Styles to show/hide password when checkbox is checked */
+#showPassword:checked ~ #passwordField {
+    -webkit-text-security: none;
+}
+/* Styles for the eye icon */
+#showPassword:checked ~ .show-password-icon i::before {
+    content: '\f070'; /* Eye icon open */
+}
+#showPassword ~ .show-password-icon i::before {
+    content: '\f06e';
+    color: #ffffff;
+    font-size: 31px;
+}
+select {
+    background-color: #504b3a;
+    color: white;
+    font-size: 18px;
+    width: 180px;
+    margin: -29px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+.data input {
+    font-size: 23px;
+    border: 1.5px solid white;
+    font-family: sans-serif;
+    display: list-item;
+}
+
+.data {
+    /*border: 1.5px solid yellow;*/
+    width: 23%;
+    margin: 10px;
+}
+.genero {
+    border-radius: 15px;
+    width: 22%;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Inter;
+    display: grid;
+    height: 102px;
+    align-content: space-evenly;
+    justify-content: center;
+    margin-left: 50%;
+    margin-top: -16%;
+    justify-items: center;
+}
+label {
+    color: var(--color-label-whiter); /* Set the placeholder text color */
+    font-style: italic; /* Set the font style for the placeholder text */
+    font-weight: bold; /* Set the font weight for the placeholder text */
+    text-decoration: var(--text-decoration-color);
+}
+label, input {
+    margin: 10px;
+    padding: 16px;
+    border-radius: 15px;
+    color: var(--color-label-whiter); /* Set the placeholder text color */
+    font-style: italic; /* Set the font style for the placeholder text */
+    font-weight: bold; /* Set the font weight for the placeholder text */
+    font-size: 18px;
+}
+input::placeholder {
+    color: var(--color-label-whiter); /* Set the placeholder text color */
+    font-style: italic; /* Set the font style for the placeholder text */
+    font-weight: bold; /* Set the font weight for the placeholder text */
+}
+#ufFaturamento {
+    border: 3px solid #1e0f03;
+    border-radius: 15px;
+    color: #f2f8f2e0;
+    background-color: #595241e8;
+    font-weight: 500;
+    font-family: var(--font-family);
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+}
+row-cliente{
+    width: 64em;
+    margin: 20px;
+    display: flow;
+    flex-wrap: wrap;
+
+}
+.row {
+    width: 64em;
+    margin: 20px;
+    display: flow;
+    flex-wrap: wrap;
+}
+
+
+section {
+    width: 55.5em;
+    margin: 0px;
+}
+section form {
+    width: 99%;
+    position: sticky;
+    margin-left: 102px;
+}
+/*input {*/
+/*    display: grid;*/
+/*    justify-content: end;*/
+/*    align-content: center;*/
+/*    align-items: center;*/
+/*    justify-items: center;*/
+/*    width: 94%;*/
+/*    height: 37px;*/
+/*    background-color: #ffffff1c;*/
+/*    border: 1.3px solid #ebf3eb;*/
+/*}*/
+input {
+    display: grid;
+    justify-content: end;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 70%;
+    height: 37px;
+    background-color: #ffffff1c;
+    border: 1.3px solid #ebf3eb;
+}
+
+/* Estilos para os inputs em telas menores */
+@media (max-width: 767px) {
+    input {
+        font-size: 14px; /* Tamanho da fonte reduzido para telas menores */
+    }
+}
+
+
+button {
+    display: inline-block;
+    padding: 10px 27px;
+    font-size: 16px;
+    background-color: rgb(255, 0, 0);
+    color: #f2f8f2;
+    cursor: pointer;
+    border: 1.5px solid #9f0606;
+    border-radius: 15px;
+    position: sticky;
+    margin-top: 39px;
+}
+/* Style when hovering over the button */
+button:hover {
+    background-color: #0615de;
+    color: var(--color-label-whiter);
+}
+/* Style when button is clicked */
+button:active {
+    background-color: #0610d7;
+}
+#voltar-button {
+    text-align: center; /* Centraliza o botão */
+}
+.botao-voltar {
+    display: block;
+    padding: 10px 27px;
+    font-size: 16px;
+    background-color: rgb(255, 0, 0);
+    color: #f2f8f2;
+    cursor: pointer;
+    border: 1.5px solid #9f0606;
+    border-radius: 15px;
+    position: sticky;
+    margin: -38px 1px 28px 32em;
+    width: 221px;
+}
+.botao-voltar:hover {
+    background-color: #0615de;
+}
+
+
+
+
+#container-button-cep {
+    top: -78px;
+    z-index: -1;
+    position: relative;
+    font-size: 20px;
+}
+
+/* Style for the row */
+.row-button {
+    display: flex;
+    justify-content: center;
+}
+/* Style for the button */
+#buscarCEP {
+    background-color: blue; /* Change to your desired background color */
+    color: white; /* Change to your desired text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    cursor: pointer;
+    margin-top: 20px; /* Adjust the top margin */
+    margin-bottom: 10px; /* Adjust the bottom margin */
+}
+/* Style for the button on hover */
+#buscarCEP:hover {
+    background-color: darkblue; /* Change to your desired hover background color */
+}
+/* Style for the row */
+.row-button {
+    display: flex;
+    justify-content: center;
+}
+/* Style for the button */
+element.style {
+}
+#buscarCEP {
+    background-color: #e90000;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+/* Style for the button on hover */
+#buscarCEP:hover {
+    background-color: darkblue; /* Change to your desired hover background color */
+}
+/* Style for the container */
+#container-button-end {
+    margin: 20px; /* Adjust margin as needed */
+}
+/* Style for the row */
+.row-button {
+    display: flex;
+    justify-content: center;
+}
+/* Style for the button */
+button-end {
+    background-color: #f40000;
+    color: white;
+    padding: 10px 20px;
+    border: 1.5px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 30em;
+    margin-left: -213px;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+/* Style for the button on hover */
+button-end:hover {
+    background-color: darkblue; /* Change to your desired hover background color */
+}
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    /* Adjust other styles for smaller screens */
+}
+/* Estilos para telas menores (exemplo: dispositivos móveis) */
+@media (max-width: 767px) {
+    /* Estilos específicos para telas menores aqui */
+    /* Pode ajustar larguras, tamanhos de fonte, etc. */
+    form {
+        width: 90%; /* Por exemplo, 90% da largura da tela */
+    }
+
+    form button {
+        width: 100%; /* Ocupar toda a largura disponível */
+    }
+}
+/* Estilos para telas médias (exemplo: tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    form {
+        width: 70%; /* Por exemplo, 70% da largura da tela */
+    }
+    form button {
+        width: 50%; /* Reduzir a largura do botão */
+    }
+}
+@media (min-width: 1024px) {
+    form {
+        width: 50%; /* Por exemplo, 50% da largura da tela */
+    }
+    form button {
+        width: 30%; /* Reduzir a largura do botão ainda mais */
+    }
+}
+@media (max-width: 767px) {
+    .header h1 {
+        font-size: 18px;
+        input {
+            max-width: auto;
+        }
+    }
+}
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: -2.5em;
+    margin-block-end: 1.5em;
+    margin-inline-start: -58px;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    width: 50em;
+}
+/* Estilo para telas grandes (desktops, 992px e acima) */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Estilo para telas médias (tablets, 768px e acima) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Estilo para telas pequenas (telefones celulares, 767px e abaixo) */
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+footer {
+    background-color: #3b1e0a;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: -50px;
+    width: 100.5vw;
+    left: -36em;
+}
