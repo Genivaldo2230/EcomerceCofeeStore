@@ -1,3 +1,9 @@
+/*
+Como acessar o banco de dados no H2-console pelo link
+http://localhost:8080/console
+Add o script pra ter acesso ao bando de dados */
+
+
 -- Verificar se a tabela existe e descartá-la se já existir
 DROP TABLE IF EXISTS UsuarioBackOffice;
 
